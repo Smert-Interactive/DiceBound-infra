@@ -2,7 +2,7 @@ name: dicebound-production
 
 services:
   backend:
-    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    image: ghcr.io/smert-interactive/dicebound-backend:sha-ea49e5c05859df0814d94cdf45dc66ca05425916
     restart: unless-stopped
 
     environment:
@@ -33,7 +33,7 @@ services:
     depends_on:
         backend:
           condition: service_healthy
-    image: ${FRONTEND_IMAGE:?FRONTEND_IMAGE is required}
+    image: ghcr.io/smert-interactive/dicebound-frontend:sha-b9165acdabfce0a3be4b3181121591e7293982db
     restart: unless-stopped
 
     ports:

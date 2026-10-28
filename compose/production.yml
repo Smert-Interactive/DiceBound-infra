@@ -1,3 +1,5 @@
+name: dicebound-production
+
 services:
   backend:
     image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
@@ -11,6 +13,10 @@ services:
 
     ports:
       - "127.0.0.1:3002:3000"
+
+    networks:
+      - application
+      - database
 
     healthcheck:
       test:
@@ -29,3 +35,13 @@ services:
 
     ports:
       - "127.0.0.1:8080:80"
+
+    networks:
+      - application
+
+networks:
+  application:
+
+  database:
+    external: true
+    name: postgres-net

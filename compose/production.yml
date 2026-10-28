@@ -12,7 +12,7 @@ services:
       ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:?ALLOWED_ORIGINS is required}
 
     ports:
-      - "127.0.0.1:3002:3000"
+      - "127.0.0.1:20030:3000"
 
     networks:
       - application
@@ -37,7 +37,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "127.0.0.1:8080:80"
+      - "127.0.0.1:20080:80"
 
     networks:
       - application

@@ -11,8 +11,8 @@ services:
       DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
       ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:?ALLOWED_ORIGINS is required}
 
-    ports:
-      - "127.0.0.1:20030:3000"
+    expose:
+      - "3000"
 
     networks:
       - application

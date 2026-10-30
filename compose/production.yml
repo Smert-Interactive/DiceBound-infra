@@ -33,7 +33,7 @@ services:
     depends_on:
         backend:
           condition: service_healthy
-    image: ghcr.io/smert-interactive/dicebound-frontend:sha-7e587cdcacda553b1b7e6d4233c475ef13438e07
+    image: ghcr.io/smert-interactive/dicebound-frontend:sha-54810f1de4f271891bc3cc59391d1bb332a2b116
     restart: unless-stopped
 
     ports:

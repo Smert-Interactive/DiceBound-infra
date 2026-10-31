@@ -2,7 +2,7 @@ name: dicebound-production
 
 services:
   backend:
-    image: ghcr.io/smert-interactive/dicebound-backend:sha-ea49e5c05859df0814d94cdf45dc66ca05425916
+    image: ghcr.io/smert-interactive/dicebound-backend:sha-b264499a02d33867211dd92c5d5d2d169cc39bcf
     restart: unless-stopped
 
     environment:
